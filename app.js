@@ -3,10 +3,8 @@ const adminRouter = require("./router/admin.js")
 
 const app = express();
 
-app.use("/", (req,res) => {
-    res.status(201).json({ message: "Task Created Successfully" });
-})
+app.use("/", adminRouter)
 
 app.listen(1000,()=>{
-    console.log("Server is Running:http://localhost:1000/")
+    console.log("Server is Running:http://localhost:1000/hello")
 });

@@ -1,9 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const adminController = require("../controller/adminController");
 
-
-router.get("/hello", (res,req) => {
-    res.status(200).json("Hey Slipbit");
-})
+router.get("/hello", adminController.getHello)
 
 module.exports = router;
